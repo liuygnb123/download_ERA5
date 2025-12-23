@@ -1,0 +1,97 @@
+{
+  "downloader_settings": {
+    "output_dir": "./ERA5_Land_data",
+    "max_workers": 4,
+    "retry_times": 3,
+    "retry_delay": 10
+  },
+  "download_tasks": [
+    {
+      "task_name": "中国区域2014年温度和辐射数据",
+      "variables": [
+        "2m_temperature",
+        "surface_solar_radiation_downwards"
+      ],
+      "start_date": "2014-01-01",
+      "end_date": "2014-01-31",
+      "area": [60, 70, 10, 140],
+      "time_hours": null,
+      "split_by": "month",
+      "merge_files": false,
+      "final_output_name": null,
+      "enabled": true
+    },
+    {
+      "task_name": "全球特定小时数据示例",
+      "variables": [
+        "2m_temperature"
+      ],
+      "start_date": "2020-01-01",
+      "end_date": "2020-01-31",
+      "area": null,
+      "time_hours": ["00:00", "06:00", "12:00", "18:00"],
+      "split_by": "month",
+      "merge_files": false,
+      "final_output_name": null,
+      "enabled": false
+    },
+    {
+      "task_name": "多变量下载示例",
+      "variables": [
+        "2m_temperature",
+        "total_precipitation",
+        "10m_u_component_of_wind",
+        "10m_v_component_of_wind"
+      ],
+      "start_date": "2015-01-01",
+      "end_date": "2015-12-31",
+      "area": [40, 100, 30, 120],
+      "time_hours": null,
+      "split_by": "month",
+      "merge_files": false,
+      "final_output_name": null,
+      "enabled": false
+    }
+  ],
+  "常用变量参考": {
+    "温度": [
+      "2m_temperature",
+      "2m_dewpoint_temperature",
+      "skin_temperature"
+    ],
+    "辐射": [
+      "surface_solar_radiation_downwards",
+      "surface_thermal_radiation_downwards",
+      "surface_net_solar_radiation"
+    ],
+    "风速": [
+      "10m_u_component_of_wind",
+      "10m_v_component_of_wind"
+    ],
+    "降水": [
+      "total_precipitation",
+      "snowfall"
+    ],
+    "湿度": [
+      "volumetric_soil_water_layer_1",
+      "volumetric_soil_water_layer_2"
+    ],
+    "压力": [
+      "surface_pressure"
+    ]
+  },
+  "区域参考": {
+    "中国": [60, 70, 10, 140],
+    "华北": [42, 110, 35, 122],
+    "华东": [35, 116, 25, 125],
+    "华南": [26, 105, 18, 120],
+    "全球": null
+  },
+  "说明": {
+    "area格式": "[北纬, 西经, 南纬, 东经]",
+    "time_hours格式": "['00:00', '01:00', ...] 或 null表示所有24小时",
+    "split_by选项": "month 或 year",
+    "enabled": "设置为true启用该任务，false禁用"
+  }
+}
+

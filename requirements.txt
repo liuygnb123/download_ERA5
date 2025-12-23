@@ -1,0 +1,20 @@
+# ERA5-Land 数据下载工具依赖包
+
+# CDS API - 用于访问 Copernicus Climate Data Store
+cdsapi>=0.6.1
+
+# 数据处理
+xarray>=2023.1.0
+netCDF4>=1.6.0
+pandas>=2.0.0
+
+# 进度显示
+tqdm>=4.65.0
+
+# 可选依赖（用于数据可视化和分析）
+# 如需使用，请取消下面的注释
+# matplotlib>=3.7.0
+# numpy>=1.24.0
+# scipy>=1.10.0
+# rasterio>=1.3.0  # 用于处理地理空间数据
+

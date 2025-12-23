@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files
+*.nc
+data/
+ERA5_Land_data/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+*.tmp
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# User specific
+.cdsapirc
+download_status.json
+verification_log.txt
+
